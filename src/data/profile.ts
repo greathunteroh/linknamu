@@ -8,11 +8,11 @@ export type LinkItem = {
 export const profile = {
   name: "노용헌",
   bio: "폭넓은 관심사를 가진 열렬한 독서가",
-  image: "/profile.svg",
+  image: "/profile.jpeg",
 };
 
 export const links: LinkItem[] = [
-  { id: "github", title: "GitHub", url: "https://github.com/" },
-  { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com/" },
-  { id: "blog", title: "Blog", url: "https://example.com/" },
+  { id: "github", title: "GitHub", url: "https://github.com/greathunteroh" },
+  { id: "facebook", title: "Facebook", url: "https://www.facebook.com/hunter.roh" },
+  { id: "instagram", title: "Instagram", url: "https://www.instagram.com/sirhunteroh" },
 ];
