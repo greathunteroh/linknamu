@@ -19,9 +19,17 @@ export default function Profile({ name, bio, image }: ProfileProps) {
       />
       <div className="min-w-0">
         <h1 className="text-xl font-semibold tracking-tight sm:text-2xl">{name}</h1>
-        <p className="mt-1.5 whitespace-pre-line text-[15px] leading-relaxed text-stone-500 dark:text-stone-400">
-          {bio}
-        </p>
+        <ul className="mt-1.5 space-y-0.5 text-[15px] leading-relaxed text-stone-500 dark:text-stone-400">
+          {bio.split("\n").map((line) => (
+            <li key={line} className="flex items-baseline gap-2">
+              <span
+                aria-hidden
+                className="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-stone-400 dark:bg-stone-500"
+              />
+              {line}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
