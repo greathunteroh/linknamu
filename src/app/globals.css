@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 body {
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  /* 따뜻한 톤의 부드러운 그라데이션 */
+  background: linear-gradient(160deg, #fdf8f3 0%, #fbeee3 45%, #f6e1d3 100%);
+  background-attachment: fixed;
+}
+
+.dark body {
+  background: linear-gradient(160deg, #1c1714 0%, #241a15 50%, #2b1d16 100%);
+  background-attachment: fixed;
 }

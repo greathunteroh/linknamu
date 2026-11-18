@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "링크나무",
@@ -33,9 +27,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body
-        className={`${geistSans.variable} bg-gray-50 text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100`}
-      >
+      <body className="min-h-screen text-stone-800 antialiased dark:text-stone-100">
         {children}
       </body>
     </html>

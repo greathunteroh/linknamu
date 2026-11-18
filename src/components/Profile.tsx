@@ -15,11 +15,13 @@ export default function Profile({ name, bio, image }: ProfileProps) {
         width={112}
         height={112}
         priority
-        className="h-24 w-24 shrink-0 rounded-full border-2 border-gray-900 object-cover sm:h-28 sm:w-28 dark:border-gray-100"
+        className="h-24 w-24 shrink-0 rounded-full object-cover shadow-[0_12px_28px_-10px_rgba(120,53,15,0.45)] ring-4 ring-white/80 sm:h-28 sm:w-28 dark:shadow-[0_12px_28px_-10px_rgba(0,0,0,0.7)] dark:ring-white/10"
       />
       <div className="min-w-0">
-        <h1 className="text-2xl font-bold">{name}</h1>
-        <p className="mt-2 text-base text-gray-600 dark:text-gray-300">{bio}</p>
+        <h1 className="text-xl font-semibold tracking-tight sm:text-2xl">{name}</h1>
+        <p className="mt-1.5 text-[15px] leading-relaxed text-stone-500 dark:text-stone-400">
+          {bio}
+        </p>
       </div>
     </section>
   );

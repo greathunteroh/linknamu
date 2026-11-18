@@ -1,5 +1,6 @@
 "use client";
 
+import BrandIcon from "@/components/BrandIcon";
 import type { LinkItem } from "@/data/profile";
 
 export default function LinkCard({ id, title, url }: LinkItem) {
@@ -17,9 +18,18 @@ export default function LinkCard({ id, title, url }: LinkItem) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={recordClick}
-      className="block w-full rounded-2xl border-2 border-gray-900 bg-white px-5 py-4 text-center font-medium transition hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 dark:border-gray-100 dark:bg-gray-900"
+      className="group flex w-full items-center justify-between rounded-lg border border-white/70 bg-white/45 px-5 py-4 font-medium shadow-[0_4px_20px_-8px_rgba(120,53,15,0.18)] backdrop-blur-md transition duration-200 hover:bg-white/65 hover:shadow-[0_8px_24px_-10px_rgba(120,53,15,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-none dark:hover:bg-white/[0.1]"
     >
-      {title}
+      <span className="flex items-center gap-3">
+        <BrandIcon id={id} />
+        {title}
+      </span>
+      <span
+        aria-hidden
+        className="text-stone-400 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-stone-600 dark:text-stone-500 dark:group-hover:text-stone-300"
+      >
+        ↗
+      </span>
     </a>
   );
 }

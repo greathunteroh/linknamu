@@ -6,7 +6,7 @@ export type LinkItem = {
 
 // TODO: 보여 주기용 더미값입니다. 실제 프로필과 링크로 교체하세요.
 export const profile = {
-  name: "노용헌",
+  name: "노용헌 (Hunter, Roh)",
   bio: "폭넓은 관심사를 가진 열렬한 독서가",
   image: "/profile.jpeg",
 };
