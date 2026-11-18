@@ -3,8 +3,14 @@
 import BrandIcon from "@/components/BrandIcon";
 import type { LinkItem } from "@/data/profile";
 
-export default function LinkCard({ id, title, url }: LinkItem) {
+type LinkCardProps = LinkItem & {
+  count: number;
+  onClicked: () => void;
+};
+
+export default function LinkCard({ id, title, url, count, onClicked }: LinkCardProps) {
   const recordClick = () => {
+    onClicked();
     const body = JSON.stringify({ linkId: id });
     // 페이지를 떠나는 중에도 전송되도록 sendBeacon을 우선 사용합니다.
     if (!navigator.sendBeacon?.("/api/clicks", body)) {
@@ -24,11 +30,16 @@ export default function LinkCard({ id, title, url }: LinkItem) {
         <BrandIcon id={id} />
         {title}
       </span>
-      <span
-        aria-hidden
-        className="text-stone-400 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-stone-600 dark:text-stone-500 dark:group-hover:text-stone-300"
-      >
-        ↗
+      <span className="flex items-center gap-3">
+        <span className="text-xs font-normal tabular-nums text-stone-400 dark:text-stone-500">
+          {count.toLocaleString("ko-KR")}회
+        </span>
+        <span
+          aria-hidden
+          className="text-stone-400 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-stone-600 dark:text-stone-500 dark:group-hover:text-stone-300"
+        >
+          ↗
+        </span>
       </span>
     </a>
   );
