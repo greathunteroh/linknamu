@@ -19,7 +19,7 @@ export default function Profile({ name, bio, image }: ProfileProps) {
       />
       <div className="min-w-0">
         <h1 className="text-xl font-semibold tracking-tight sm:text-2xl">{name}</h1>
-        <p className="mt-1.5 text-[15px] leading-relaxed text-stone-500 dark:text-stone-400">
+        <p className="mt-1.5 whitespace-pre-line text-[15px] leading-relaxed text-stone-500 dark:text-stone-400">
           {bio}
         </p>
       </div>

@@ -7,7 +7,8 @@ export type LinkItem = {
 // TODO: 보여 주기용 더미값입니다. 실제 프로필과 링크로 교체하세요.
 export const profile = {
   name: "노용헌 (Hunter, Roh)",
-  bio: "폭넓은 관심사를 가진 열렬한 독서가",
+  // 줄바꿈(\n)을 넣으면 소개가 여러 줄로 표시됩니다.
+  bio: "폭넓은 관심사를 가진 열렬한 독서가\n질서보다는 정의와 공정을 원한다",
   image: "/profile.jpeg",
 };
 
